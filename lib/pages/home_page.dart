@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             taskName: toDoList[index][0],
             taskCompleted: toDoList[index][1],
             onChanged: (value) => checkBoxChanged(index),
-            deleteFunction: (context) => deleteTask(index),
+            deleteFunction: (context) => deleteTask(index), title: '',
           );
         },
       ),

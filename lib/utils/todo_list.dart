@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class TodoList extends StatelessWidget {
   const TodoList({
@@ -8,6 +9,7 @@ class TodoList extends StatelessWidget {
     required this.taskCompleted,
     required this.onChanged,
     required this.deleteFunction,
+    required String title,
   });
 
   final String taskName;
@@ -69,4 +71,24 @@ class TodoList extends StatelessWidget {
       ),
     ));
   }
+}
+
+@widgetbook.UseCase(
+  name: 'Checked',
+  type: TodoList,
+)
+TodoList checked (BuildContext context) {
+  return TodoList(
+    title: 'Checked', taskName: '', taskCompleted: true, onChanged: (bool? value) => print(value), deleteFunction: (BuildContext ) {  },
+  );
+}
+
+@widgetbook.UseCase(
+  name: 'unChecked',
+  type: TodoList,
+)
+TodoList unchecked (BuildContext context) {
+  return TodoList(
+    title: 'unChecked', taskName: '', taskCompleted: false, onChanged: (bool? value) => print(value), deleteFunction: (BuildContext ) {  },
+  );
 }
