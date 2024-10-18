@@ -191,7 +191,7 @@ packages:
     source: hosted
     version: "2.3.7"
   device_frame:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: device_frame
       sha256: d031a06f5d6f4750009672db98a5aa1536aa4a231713852469ce394779a23d75
@@ -614,7 +614,7 @@ packages:
     source: hosted
     version: "3.0.1"
   widgetbook:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: widgetbook
       sha256: "4db3ab02c3159dd898b362c8681b9cdabda33caae3a9d13e3fc71231a485ad33"

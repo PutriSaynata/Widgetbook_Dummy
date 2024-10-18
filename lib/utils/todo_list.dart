@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
+import 'package:widgetbook/widgetbook.dart';
+
 
 class TodoList extends StatelessWidget {
   const TodoList({
@@ -77,9 +79,13 @@ class TodoList extends StatelessWidget {
   name: 'Checked',
   type: TodoList,
 )
-TodoList checked (BuildContext context) {
+TodoList checked(BuildContext context) {
   return TodoList(
-    title: 'Checked', taskName: '', taskCompleted: true, onChanged: (bool? value) => print(value), deleteFunction: (BuildContext ) {  },
+    title: 'Checked',
+    taskName: context.knobs.string(label: 'Task Name', initialValue: ''),
+    taskCompleted: true,
+    onChanged: (bool? value) => print(value),
+    deleteFunction: (BuildContext ) {  },
   );
 }
 
@@ -87,8 +93,12 @@ TodoList checked (BuildContext context) {
   name: 'unChecked',
   type: TodoList,
 )
-TodoList unchecked (BuildContext context) {
+TodoList unchecked(BuildContext context) {
   return TodoList(
-    title: 'unChecked', taskName: '', taskCompleted: false, onChanged: (bool? value) => print(value), deleteFunction: (BuildContext ) {  },
+    title: 'unChecked',
+    taskName: context.knobs.string(label: 'Task Name', initialValue: ''),
+    taskCompleted: false,
+    onChanged: (bool? value) => print(value),
+    deleteFunction: (BuildContext ) {  },
   );
 }
