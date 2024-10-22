@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 import 'package:device_frame/device_frame.dart';
+import 'package:inspector/inspector.dart';
 
 // Import the generated directories variable
 import 'widgetbook.directories.g.dart';
@@ -40,6 +41,7 @@ class WidgetbookApp extends StatelessWidget {
             Devices.ios.iPhone13,
           ],
         ),
+        InspectorAddon(enabled: true),
       ],
     );
   }
